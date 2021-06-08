@@ -489,15 +489,15 @@ class MOVEitem(Item):
 
 
 '''----------------------------------------------------------------------'''
+if __name__ == "__main__":
+    print('''Welcome to my house!
+    if you need any 'help' please tell me!''')
 
-print('''Welcome to my house!
-if you need any 'help' please tell me!''')
+    txt = sys.argv[1]
+    house = House(txt) 
+    game = Game()
+    player = game.new_player(house.start)
+    game.player = player
 
-txt = sys.argv[1]
-house = House(txt) 
-game = Game()
-player = game.new_player(house.start)
-game.player = player
-             
-game.run()
+    game.run()
     
